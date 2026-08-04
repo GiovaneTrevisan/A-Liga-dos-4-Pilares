@@ -1,4 +1,7 @@
-package PACKAGE_NAME;
+public abstract class Personagem {
+    public String nome;
+    public Sexo sexo;
+    public Double altura;
 
-public class Personagem {
+    public abstract String apresentar();
 }
