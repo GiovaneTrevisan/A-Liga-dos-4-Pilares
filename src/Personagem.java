@@ -1,9 +1,9 @@
 import java.util.Objects;
 
 public abstract class Personagem {
-    private String nome;
-    private Sexo sexo;
-    private Double altura;
+    protected String nome;
+    protected Sexo sexo;
+    protected Double altura;
 
     public Personagem(String nome, Sexo sexo, Double altura) {
         if (altura < 0.5 || altura > 3.0) {

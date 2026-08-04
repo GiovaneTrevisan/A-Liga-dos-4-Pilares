@@ -6,15 +6,16 @@ public class Main {
     public static void main(String[] args) {
 
         String nome = "Lisiane Reips";
+        String nomeDeGuerra = "Mulher maravilha";
         Sexo sexo = Sexo.MULHER;
-        Double altura = 1.75;
+        double altura = 1.75;
         boolean identidadeSecreta = true;
         List<String> habilidades = Arrays.asList("super força", "visão de raio-x", "voar",
                 "super velocidade", "sopro congelante");
 
-        SuperHeroi h = new SuperHeroi(nome, sexo, altura, identidadeSecreta, habilidades);
+        SuperHeroi h = new SuperHeroi(nome, sexo, altura, nomeDeGuerra, identidadeSecreta, habilidades);
 
-        h.mostrar();
+        System.out.println(h.apresentar());
 
         // O vilão consegue fazer isto. Por quê?
         //h.altura = -300;
