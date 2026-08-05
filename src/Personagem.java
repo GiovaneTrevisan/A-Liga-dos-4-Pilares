@@ -15,6 +15,8 @@ public abstract class Personagem {
         this.altura = altura;
     }
 
+    public abstract void agir();
+
     public abstract String apresentar();
 
     public Double getAltura() {
@@ -27,5 +29,10 @@ public abstract class Personagem {
 
     public Sexo getSexo() {
         return sexo;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: "  + nome + ", Sexo: " + sexo.getDescricao() + ", Altura: " + altura;
     }
 }

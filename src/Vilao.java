@@ -16,9 +16,23 @@ public class Vilao extends Personagem {
     }
 
     @Override
+    public void agir() {
+        if (nivelAmeaca < 4) {
+            System.out.println("Ataque fraco");
+        }
+
+        if (nivelAmeaca > 4 && nivelAmeaca < 8) {
+            System.out.println("Ataque médio");
+        }
+
+        if (nivelAmeaca >= 8 && nivelAmeaca <= 10) {
+            System.out.println("Ataque Forte");
+        }
+    }
+
+    @Override
     public String apresentar() {
-        return "Nome: " + getNome() + " | "  +
-                "Sexo: " + sexo.getDescricao() + " | Altura: " + getAltura() +
-                "Nível de ameaça: " + getNivelAmeaca();
+        return super.toString() +
+                " | Nível de ameaça: " + getNivelAmeaca();
     }
 }

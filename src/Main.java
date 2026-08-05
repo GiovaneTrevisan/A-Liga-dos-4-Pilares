@@ -1,9 +1,12 @@
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
+        List<Personagem> personagens = new ArrayList<>();
 
         String nome = "Lisiane Reips";
         String nomeDeGuerra = "Mulher maravilha";
@@ -14,22 +17,20 @@ public class Main {
                 "super velocidade", "sopro congelante");
 
         SuperHeroi h = new SuperHeroi(nome, sexo, altura, nomeDeGuerra, identidadeSecreta, habilidades);
+        personagens.add(h);
 
-        System.out.println(h.apresentar());
+        String nomeVilao = "Dr Trevoso";
+        Sexo sexoVilao = Sexo.HOMEM;
+        double alturaVilao = 1.90;
+        int nivelAmeaca = 10;
 
-        // O vilão consegue fazer isto. Por quê?
-        //h.altura = -300;
-        //h.nome = "";
-        //h.mostrar();
+        Vilao v = new Vilao(nomeVilao, sexoVilao, alturaVilao, nivelAmeaca);
+        personagens.add(v);
 
-        //Teste Lista
-        List<String> habilidadesTeste = h.getHabilidades();
-
-        habilidadesTeste.add("Habilidade de teste");
-
-        System.out.println(habilidadesTeste.size());
-        System.out.println(habilidades.size());
-
-        //Personagem px = new Personagem() {};
+        for (Personagem p : personagens) {
+            System.out.println(p.apresentar());
+            p.agir();
+            System.out.println("---------------------------------------------");
+        }
     }
 }
